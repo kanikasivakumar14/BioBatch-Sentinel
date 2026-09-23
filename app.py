@@ -411,20 +411,16 @@ if st.button(
     )
 
 
-   # Create a clean horizontal feature-importance chart.
-
-chart_data = importance_df.set_index(
-    "Process Variable"
-)[["Model Importance"]]
-
-st.bar_chart(
-    chart_data,
-    horizontal=True
-)
+    # Display feature importance chart.
+    st.bar_chart(
+        importance_df.set_index(
+            "Process Variable"
+        )
+    )
 
 
     # Display importance values.
-st.dataframe(
+    st.dataframe(
         importance_df,
         use_container_width=True
     )
