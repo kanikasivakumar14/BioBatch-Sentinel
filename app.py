@@ -424,7 +424,7 @@ st.bar_chart(
 
 
     # Display importance values.
-    st.dataframe(
+st.dataframe(
         importance_df,
         use_container_width=True
     )
